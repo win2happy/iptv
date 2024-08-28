@@ -18,8 +18,8 @@ jobs:
     # 步骤2：配置 Git 用户信息
     - name: Set up Git
       run: |
-        git config --global user.name "vbskycn"
-        git config --global user.email "88164962@qq.com"
+        git config --global user.name "win2happy"
+        git config --global user.email "win.lee.svip@gmail.com"
 
     # 步骤3：下载指定文件
     - name: Download files
@@ -27,12 +27,12 @@ jobs:
         TOKEN: ${{ secrets.PERSONAL_ACCESS_TOKEN }}
       run: |
         mkdir -p /tmp/tv # 创建临时目录存放下载的文件
-        curl -H "Authorization: token $TOKEN" -o /tmp/tv/jxdx_hd.txt https://raw.githubusercontent.com/vbskycn/iptv/master/dsyy/jxdx_hd.txt
-        curl -H "Authorization: token $TOKEN" -o /tmp/tv/iptv6.txt https://raw.githubusercontent.com/vbskycn/iptv6/master/iptv6.txt
-        curl -H "Authorization: token $TOKEN" -o /tmp/tv/iptv4.txt https://raw.githubusercontent.com/vbskycn/iptv4/master/iptv4.txt
-        curl -H "Authorization: token $TOKEN" -o /tmp/tv/jxdx_hd.m3u https://raw.githubusercontent.com/vbskycn/iptv/master/dsyy/jxdx_hd.m3u
-        curl -H "Authorization: token $TOKEN" -o /tmp/tv/iptv4.m3u https://raw.githubusercontent.com/vbskycn/iptv4/master/iptv4.m3u
-        curl -H "Authorization: token $TOKEN" -o /tmp/tv/iptv6.m3u https://raw.githubusercontent.com/vbskycn/iptv6/master/iptv6.m3u
+        curl -H "Authorization: token $TOKEN" -o /tmp/tv/jxdx_hd.txt https://raw.githubusercontent.com/win2happy/iptv/master/dsyy/jxdx_hd.txt
+        curl -H "Authorization: token $TOKEN" -o /tmp/tv/iptv6.txt https://raw.githubusercontent.com/win2happy/iptv6/master/iptv6.txt
+        curl -H "Authorization: token $TOKEN" -o /tmp/tv/iptv4.txt https://raw.githubusercontent.com/win2happy/iptv4/master/iptv4.txt
+        curl -H "Authorization: token $TOKEN" -o /tmp/tv/jxdx_hd.m3u https://raw.githubusercontent.com/win2happy/iptv/master/dsyy/jxdx_hd.m3u
+        curl -H "Authorization: token $TOKEN" -o /tmp/tv/iptv4.m3u https://raw.githubusercontent.com/win2happy/iptv4/master/iptv4.m3u
+        curl -H "Authorization: token $TOKEN" -o /tmp/tv/iptv6.m3u https://raw.githubusercontent.com/win2happy/iptv6/master/iptv6.m3u
 
     # 步骤4：同步文件到 /tv 目录
     - name: Sync files to /tv
