@@ -3,8 +3,8 @@ name: sync_live_list
 # 定义工作流何时触发
 on:
   # 每小时的第5分钟触发
-  schedule:
-    - cron: '5 * * * *'
+  # schedule:
+    # - cron: '5 * * * *'
   # 允许手动运行工作流
   workflow_dispatch:
 
